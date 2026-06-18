@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#1A1410",
+  themeColor: "#FFFFFF",
 };
 
 export default function RootLayout({
@@ -49,7 +49,7 @@ export default function RootLayout({
       lang="cs"
       className={`${barlowCondensed.variable} ${dmSans.variable} ${ibmPlexMono.variable}`}
     >
-      <body className="min-h-screen flex flex-col bg-dirt text-chalk">
+      <body className="min-h-screen flex flex-col bg-white text-dirt">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

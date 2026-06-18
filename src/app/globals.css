@@ -2,10 +2,10 @@
 
 :root {
   --col-dirt:  #1A1410;
-  --col-brand: #D4780A;
+  --col-brand: #B5A040;
   --col-chalk: #F2EDE6;
   --col-rust:  #8B3A1F;
-  --col-mist:  #C8C4BC;
+  --col-mist:  #6B6560;
 }
 
 @theme inline {
@@ -29,8 +29,8 @@ html {
 }
 
 body {
-  background-color: var(--col-dirt);
-  color: var(--col-chalk);
+  background-color: #FFFFFF;
+  color: var(--col-dirt);
   font-family: var(--font-inter-var), 'DM Sans', system-ui, sans-serif;
   font-size: 17px;
   line-height: 1.7;

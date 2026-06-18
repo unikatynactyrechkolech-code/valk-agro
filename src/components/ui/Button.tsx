@@ -33,11 +33,11 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-brand text-dirt hover:bg-[#c46b08] active:translate-y-[1px]",
+      "bg-brand text-dirt hover:bg-[#9D8B36] active:translate-y-[1px]",
     secondary:
-      "bg-transparent text-chalk border border-chalk/30 hover:border-chalk/70 hover:text-chalk active:translate-y-[1px]",
+      "bg-transparent text-dirt border border-dirt/30 hover:border-dirt/70 hover:text-dirt active:translate-y-[1px]",
     ghost:
-      "bg-transparent text-brand hover:text-[#c46b08] underline-offset-4 hover:underline p-0 uppercase tracking-wider text-xs",
+      "bg-transparent text-brand hover:text-[#9D8B36] underline-offset-4 hover:underline p-0 uppercase tracking-wider text-xs",
   };
 
   const classes = cn(base, sizes[size], variants[variant], className);

@@ -19,11 +19,11 @@ export default function Problem() {
   ];
 
   return (
-    <section className="bg-[#130F0C] py-24 md:py-36">
+    <section className="bg-chalk py-24 md:py-36">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12">
         {/* Section header */}
         <div className="mb-16 md:mb-20 max-w-[620px]">
-          <h2 className="font-syne font-black text-chalk leading-[0.88] mb-5"
+          <h2 className="font-syne font-black text-dirt leading-[0.88] mb-5"
             style={{ fontSize: "clamp(34px, 5vw, 62px)" }}>
             Co vás trápí.
             <br />
@@ -36,12 +36,12 @@ export default function Problem() {
         </div>
 
         {/* Problems grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-white/5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-black/10">
           {problems.map((item, i) => (
             <div
               key={i}
-              className={`p-8 md:p-10 border-b border-white/5 ${
-                i % 2 === 0 ? "md:border-r md:border-r-white/5" : ""
+              className={`p-8 md:p-10 border-b border-black/10 ${
+                i % 2 === 0 ? "md:border-r md:border-r-black/10" : ""
               }`}
             >
               {/* Problem */}
@@ -55,14 +55,14 @@ export default function Problem() {
               </div>
 
               {/* Divider */}
-              <div className="h-px bg-white/8 mb-5" />
+              <div className="h-px bg-black/8 mb-5" />
 
               {/* Solution */}
               <div className="flex items-start gap-3">
                 <span className="mt-1 font-tech text-brand text-xs uppercase shrink-0">
                   Řešení
                 </span>
-                <p className="text-chalk text-sm leading-relaxed">
+                <p className="text-dirt text-sm leading-relaxed">
                   {item.after}
                 </p>
               </div>

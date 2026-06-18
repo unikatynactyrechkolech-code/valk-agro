@@ -3,13 +3,13 @@ import Link from "next/link";
 
 export default function Overview() {
   return (
-    <section className="bg-[#130F0C] py-0">
+    <section className="bg-chalk py-0">
       {/* Top block — intro with circular pig photo */}
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-20 md:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
           <div>
             <h2
-              className="font-syne font-black text-chalk leading-[0.88] mb-6"
+              className="font-syne font-black text-dirt leading-[0.88] mb-6"
               style={{ fontSize: "clamp(32px, 4.5vw, 58px)" }}
             >
               Vodotěsné LED osvětlení
@@ -26,7 +26,7 @@ export default function Overview() {
             </div>
             <Link
               href="/produkty"
-              className="inline-flex items-center font-body font-semibold text-sm uppercase tracking-wider text-chalk border border-chalk/20 px-6 py-3 hover:border-brand/60 hover:text-brand transition-colors"
+              className="inline-flex items-center font-body font-semibold text-sm uppercase tracking-wider text-dirt border border-dirt/20 px-6 py-3 hover:border-brand/60 hover:text-brand transition-colors"
             >
               Prohlédnout svítidla
             </Link>
@@ -50,12 +50,12 @@ export default function Overview() {
       </div>
 
       {/* Divider */}
-      <div className="w-full h-px bg-white/5" />
+      <div className="w-full h-px bg-black/8" />
 
       {/* Two-column — pig farming + cattle, each with circular image */}
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-20 md:py-28">
         <h2
-          className="font-syne font-black text-chalk leading-[0.88] mb-14"
+          className="font-syne font-black text-dirt leading-[0.88] mb-14"
           style={{ fontSize: "clamp(32px, 4.5vw, 58px)" }}
         >
           Zvyšte pohodu zvířat
@@ -77,7 +77,7 @@ export default function Overview() {
                 />
               </div>
               <div>
-                <h3 className="font-syne font-black text-chalk text-xl mb-2">
+                <h3 className="font-syne font-black text-dirt text-xl mb-2">
                   Osvětlení prasečích stájí
                 </h3>
                 <p className="text-mist text-sm leading-relaxed">
@@ -88,7 +88,7 @@ export default function Overview() {
             </div>
             <Link
               href="/produkty"
-              className="font-tech text-xs uppercase text-brand hover:text-[#c46b08] transition-colors self-start"
+              className="font-tech text-xs uppercase text-brand hover:text-[#9D8B36] transition-colors self-start"
             >
               Prohlédnout LED svítidla
             </Link>
@@ -96,13 +96,13 @@ export default function Overview() {
 
           {/* Quote */}
           <div className="flex flex-col justify-center">
-            <p className="text-chalk/80 text-base leading-relaxed italic mb-4">
+            <p className="text-dirt/80 text-base leading-relaxed italic mb-4">
               &ldquo;Neváhal jsem ani sekundu namířit tlakový čistič přímo na
               svítidlo. Vypadají robustně a opravdu jsou vodotěsná.&rdquo;
             </p>
             <Link
               href="/reference"
-              className="font-tech text-xs uppercase text-brand hover:text-[#c46b08] transition-colors self-start"
+              className="font-tech text-xs uppercase text-brand hover:text-[#9D8B36] transition-colors self-start"
             >
               Zobrazit reference
             </Link>

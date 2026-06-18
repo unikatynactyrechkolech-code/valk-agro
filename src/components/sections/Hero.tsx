@@ -7,12 +7,12 @@ import { COMPANY } from "@/lib/constants";
 
 export default function Hero() {
   return (
-    <section className="noise-overlay relative min-h-screen bg-dirt overflow-hidden flex items-center">
+    <section className="noise-overlay relative min-h-screen bg-white overflow-hidden flex items-center">
       {/* Ambient glow */}
       <div
         className="absolute top-1/2 right-[10%] -translate-y-1/2 w-[600px] h-[600px] pointer-events-none z-10"
         style={{
-          background: "radial-gradient(circle, #D4780A 0%, transparent 65%)",
+          background: "radial-gradient(circle, #B5A040 0%, transparent 65%)",
           opacity: 0.12,
           filter: "blur(2px)",
         }}
@@ -28,8 +28,8 @@ export default function Hero() {
           priority
           sizes="(max-width: 1024px) 100vw, 60vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-dirt via-dirt/75 to-dirt/10 lg:via-dirt/55 lg:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-dirt/60 via-transparent to-dirt/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/75 to-white/10 lg:via-white/55 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/70" />
       </div>
 
       <div className="relative z-20 max-w-[1200px] mx-auto px-6 md:px-12 w-full pt-28 pb-20 md:pt-36 md:pb-28">
@@ -38,7 +38,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
-            className="font-syne text-chalk font-black leading-[0.9] mb-8"
+            className="font-syne text-dirt font-black leading-[0.9] mb-8"
             style={{ fontSize: "clamp(44px, 7.5vw, 88px)" }}
           >
             Světlo co
@@ -81,7 +81,7 @@ export default function Hero() {
           >
             <a
               href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
-              className="font-tech text-sm text-mist hover:text-chalk transition-colors"
+              className="font-tech text-sm text-mist hover:text-dirt transition-colors"
             >
               {COMPANY.phone}
             </a>
@@ -90,7 +90,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-dirt to-transparent pointer-events-none z-30" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent pointer-events-none z-30" />
     </section>
   );
 }

@@ -10,13 +10,13 @@ const navLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#110D0A] border-t border-white/5 mt-auto">
+    <footer className="bg-chalk border-t border-black/10 mt-auto">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 py-14 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
           {/* Brand */}
           <div>
             <div className="mb-5">
-              <span className="font-syne font-black text-lg text-chalk">
+              <span className="font-syne font-black text-lg text-dirt">
                 Valk<span className="text-brand"> Agro</span>
               </span>
             </div>
@@ -32,7 +32,7 @@ export default function Footer() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-mist text-sm hover:text-chalk transition-colors"
+                  className="text-mist text-sm hover:text-dirt transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -45,13 +45,13 @@ export default function Footer() {
             <div className="flex flex-col gap-2.5 text-sm text-mist">
               <a
                 href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
-                className="hover:text-chalk transition-colors font-tech"
+                className="hover:text-dirt transition-colors font-tech"
               >
                 {COMPANY.phone}
               </a>
               <a
                 href={`mailto:${COMPANY.email}`}
-                className="hover:text-chalk transition-colors"
+                className="hover:text-dirt transition-colors"
               >
                 {COMPANY.email}
               </a>
@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-6 border-t border-white/5 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
+        <div className="mt-12 pt-6 border-t border-black/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-3">
           <p className="text-mist/50 text-xs font-tech">
             © {new Date().getFullYear()} {COMPANY.legal} — Všechna práva vyhrazena
           </p>

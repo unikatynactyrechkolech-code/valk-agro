@@ -32,14 +32,14 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-dirt/90 backdrop-blur-md border-b border-white/5"
+          ? "bg-white/90 backdrop-blur-md border-b border-black/10"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-[1200px] mx-auto px-6 md:px-12 h-16 md:h-20 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="group">
-          <span className="font-syne font-black text-xl text-chalk tracking-tight group-hover:text-brand transition-colors">
+          <span className="font-syne font-black text-xl text-dirt tracking-tight group-hover:text-brand transition-colors">
             Valk<span className="text-brand"> Agro</span>
           </span>
         </Link>
@@ -53,7 +53,7 @@ export default function Header() {
               className={`font-body text-sm tracking-wide uppercase transition-colors duration-150 ${
                 pathname === link.href
                   ? "text-brand"
-                  : "text-mist hover:text-chalk"
+                  : "text-mist hover:text-dirt"
               }`}
             >
               {link.label}
@@ -65,13 +65,13 @@ export default function Header() {
         <div className="hidden md:flex items-center gap-6">
           <a
             href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
-            className="font-tech text-sm text-mist hover:text-chalk transition-colors tracking-wide"
+            className="font-tech text-sm text-mist hover:text-dirt transition-colors tracking-wide"
           >
             {COMPANY.phone}
           </a>
           <Link
             href="/kontakt"
-            className="bg-brand text-dirt font-body font-semibold text-xs px-5 py-2.5 uppercase tracking-wider hover:bg-[#c46b08] transition-colors"
+            className="bg-brand text-dirt font-body font-semibold text-xs px-5 py-2.5 uppercase tracking-wider hover:bg-[#9D8B36] transition-colors"
           >
             Poptávka
           </Link>
@@ -84,13 +84,13 @@ export default function Header() {
           aria-label="Navigace"
         >
           <span
-            className={`block w-6 h-0.5 bg-chalk transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+            className={`block w-6 h-0.5 bg-dirt transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
           />
           <span
-            className={`block w-6 h-0.5 bg-chalk transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`}
+            className={`block w-6 h-0.5 bg-dirt transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`}
           />
           <span
-            className={`block w-6 h-0.5 bg-chalk transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            className={`block w-6 h-0.5 bg-dirt transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
           />
         </button>
       </div>
@@ -103,7 +103,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="md:hidden bg-dirt/95 backdrop-blur-md border-t border-white/5 px-6 py-6"
+            className="md:hidden bg-white/95 backdrop-blur-md border-t border-black/10 px-6 py-6"
           >
             <nav className="flex flex-col gap-5 mb-6">
               {navLinks.map((link) => (
@@ -111,7 +111,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   className={`font-body text-base uppercase tracking-wide ${
-                    pathname === link.href ? "text-brand" : "text-chalk"
+                    pathname === link.href ? "text-brand" : "text-dirt"
                   }`}
                 >
                   {link.label}
@@ -126,7 +126,7 @@ export default function Header() {
             </a>
             <Link
               href="/kontakt"
-              className="inline-block bg-brand text-dirt font-body font-semibold text-xs px-6 py-3 uppercase tracking-wider"
+              className="inline-block bg-brand text-dirt font-body font-semibold text-xs px-6 py-3 uppercase tracking-wider hover:bg-[#9D8B36] transition-colors"
             >
               Poptávka
             </Link>

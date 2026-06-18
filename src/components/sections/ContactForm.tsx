@@ -42,13 +42,13 @@ export default function ContactForm() {
             height="20"
             viewBox="0 0 24 24"
             fill="none"
-            stroke="#D4780A"
+            stroke="#B5A040"
             strokeWidth="2"
           >
             <polyline points="20 6 9 17 4 12" />
           </svg>
         </div>
-        <p className="font-syne font-black text-chalk text-xl mb-2">
+        <p className="font-syne font-black text-dirt text-xl mb-2">
           Poptávka odeslána.
         </p>
         <p className="text-mist text-sm">
@@ -77,7 +77,7 @@ export default function ContactForm() {
             {...register("name", { required: "Povinné pole" })}
             type="text"
             placeholder="Jan Novák"
-            className="bg-transparent border-b border-white/15 focus:border-brand pb-2.5 text-chalk placeholder-mist/30 font-body text-base transition-colors duration-200"
+            className="bg-transparent border-b border-black/15 focus:border-brand pb-2.5 text-dirt placeholder-mist/40 font-body text-base transition-colors duration-200"
           />
           {errors.name && (
             <span className="font-tech text-[10px] text-rust">
@@ -95,7 +95,7 @@ export default function ContactForm() {
             {...register("phone", { required: "Povinné pole" })}
             type="tel"
             placeholder="+420 725 381 004"
-            className="bg-transparent border-b border-white/15 focus:border-brand pb-2.5 text-chalk placeholder-mist/30 font-body text-base transition-colors duration-200"
+            className="bg-transparent border-b border-black/15 focus:border-brand pb-2.5 text-dirt placeholder-mist/40 font-body text-base transition-colors duration-200"
           />
           {errors.phone && (
             <span className="font-tech text-[10px] text-rust">
@@ -120,7 +120,7 @@ export default function ContactForm() {
           })}
           type="email"
           placeholder="jan@farma.cz"
-          className="bg-transparent border-b border-white/15 focus:border-brand pb-2.5 text-chalk placeholder-mist/30 font-body text-base transition-colors duration-200"
+          className="bg-transparent border-b border-black/15 focus:border-brand pb-2.5 text-dirt placeholder-mist/40 font-body text-base transition-colors duration-200"
         />
         {errors.email && (
           <span className="font-tech text-[10px] text-rust">
@@ -136,7 +136,7 @@ export default function ContactForm() {
         </label>
         <select
           {...register("count", { required: "Povinné pole" })}
-          className="bg-[#1A1410] border-b border-white/15 focus:border-brand pb-2.5 text-chalk font-body text-base transition-colors duration-200 cursor-pointer"
+          className="bg-white border-b border-black/15 focus:border-brand pb-2.5 text-dirt font-body text-base transition-colors duration-200 cursor-pointer"
           defaultValue=""
         >
           <option value="" disabled className="text-mist/40">
@@ -162,14 +162,14 @@ export default function ContactForm() {
           {...register("message")}
           rows={4}
           placeholder="Popište svůj projekt, stávající osvětlení, nebo co vás trápí..."
-          className="bg-transparent border-b border-white/15 focus:border-brand pb-2.5 text-chalk placeholder-mist/30 font-body text-base transition-colors duration-200 resize-none"
+          className="bg-transparent border-b border-black/15 focus:border-brand pb-2.5 text-dirt placeholder-mist/40 font-body text-base transition-colors duration-200 resize-none"
         />
       </div>
 
       <button
         type="submit"
         disabled={sending}
-        className="self-start bg-brand text-dirt font-body font-semibold text-sm uppercase tracking-wider px-8 py-4 hover:bg-[#c46b08] transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center gap-3"
+        className="self-start bg-brand text-dirt font-body font-semibold text-sm uppercase tracking-wider px-8 py-4 hover:bg-[#9D8B36] transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center gap-3"
       >
         {sending ? (
           <>

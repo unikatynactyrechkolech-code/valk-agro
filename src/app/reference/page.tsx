@@ -76,14 +76,14 @@ export default function ReferencePage() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="bg-dirt py-24 md:py-36 relative overflow-hidden">
+      <section className="bg-white py-24 md:py-36 relative overflow-hidden">
         <div
           className="absolute top-1/2 right-0 -translate-y-1/2 w-[400px] h-[400px] pointer-events-none"
-          style={{ background: "radial-gradient(circle, #D4780A 0%, transparent 70%)", opacity: 0.07 }}
+          style={{ background: "radial-gradient(circle, #B5A040 0%, transparent 70%)", opacity: 0.07 }}
         />
         <div className="max-w-[1200px] mx-auto px-6 md:px-12">
           <h1
-            className="font-syne font-black text-chalk leading-[0.88] mb-5"
+            className="font-syne font-black text-dirt leading-[0.88] mb-5"
             style={{ fontSize: "clamp(40px, 6vw, 80px)" }}
           >
             Co říkají
@@ -98,13 +98,13 @@ export default function ReferencePage() {
       </section>
 
       {/* References grid */}
-      <section className="bg-[#130F0C] py-20 md:py-28">
+      <section className="bg-chalk py-20 md:py-28">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
             {references.map((ref, i) => (
               <article
                 key={i}
-                className="bg-dirt border border-white/5 hover:border-white/10 transition-colors duration-300 group"
+                className="bg-white border border-black/10 hover:border-black/20 transition-colors duration-300 group"
               >
                 {/* Barn photo */}
                 <div className="relative aspect-[16/10] overflow-hidden">
@@ -115,14 +115,14 @@ export default function ReferencePage() {
                     className="object-cover group-hover:scale-[1.02] transition-transform duration-500"
                     sizes="(max-width: 768px) 100vw, 50vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dirt/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                 </div>
 
                 {/* Content */}
                 <div className="p-6 md:p-8">
                   <div className="flex items-start justify-between gap-4 mb-5">
                     <div>
-                      <h2 className="font-syne font-black text-chalk text-lg leading-tight mb-1">
+                      <h2 className="font-syne font-black text-dirt text-lg leading-tight mb-1">
                         {ref.name}
                       </h2>
                       <p className="font-tech text-[11px] tracking-wide uppercase text-mist/50">
@@ -135,11 +135,11 @@ export default function ReferencePage() {
                   </div>
 
                   <div className="flex gap-3 mb-5 flex-wrap">
-                    <span className="font-tech text-xs text-mist/60 border border-white/8 px-2.5 py-1">{ref.count}</span>
-                    <span className="font-tech text-xs text-mist/60 border border-white/8 px-2.5 py-1">{ref.halls}</span>
+                    <span className="font-tech text-xs text-mist/60 border border-black/10 px-2.5 py-1">{ref.count}</span>
+                    <span className="font-tech text-xs text-mist/60 border border-black/10 px-2.5 py-1">{ref.halls}</span>
                   </div>
 
-                  <blockquote className="pt-3 border-t border-white/5">
+                  <blockquote className="pt-3 border-t border-black/10">
                     <p className="text-mist text-sm leading-relaxed italic">
                       &ldquo;{ref.quote}&rdquo;
                     </p>
@@ -155,7 +155,7 @@ export default function ReferencePage() {
       </section>
 
       {/* Numbers */}
-      <section className="bg-dirt py-16 border-t border-b border-white/5">
+      <section className="bg-white py-16 border-t border-b border-black/10">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
@@ -176,10 +176,10 @@ export default function ReferencePage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#130F0C] py-20 text-center">
+      <section className="bg-chalk py-20 text-center">
         <div className="max-w-[600px] mx-auto px-6 md:px-12">
           <h2
-            className="font-syne font-black text-chalk leading-[0.88] mb-5"
+            className="font-syne font-black text-dirt leading-[0.88] mb-5"
             style={{ fontSize: "clamp(36px, 5vw, 72px)" }}
           >
             Vaše farma

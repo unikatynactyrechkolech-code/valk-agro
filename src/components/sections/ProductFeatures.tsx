@@ -39,11 +39,11 @@ const iconMap: Record<string, React.FC> = {
 
 export default function ProductFeatures() {
   return (
-    <section className="skew-top bg-dirt py-28 md:py-40 mt-[-3vw]">
+    <section className="skew-top bg-white py-28 md:py-40 mt-[-3vw]">
       <div className="max-w-[1200px] mx-auto px-6 md:px-12">
         <div className="mb-16 md:mb-20">
           <h2
-            className="font-syne font-black text-chalk leading-[0.88]"
+            className="font-syne font-black text-dirt leading-[0.88]"
             style={{ fontSize: "clamp(34px, 5vw, 62px)" }}
           >
             Čtyři věci
@@ -58,13 +58,13 @@ export default function ProductFeatures() {
             return (
               <div
                 key={i}
-                className="group relative p-8 md:p-10 bg-[#130F0C] border border-white/5 hover:border-brand/20 transition-colors duration-300"
+                className="group relative p-8 md:p-10 bg-chalk border border-black/10 hover:border-brand/20 transition-colors duration-300"
               >
                 {/* Accent bar */}
                 <div className="absolute top-0 left-0 w-12 h-0.5 bg-brand opacity-50 group-hover:w-24 group-hover:opacity-80 transition-all duration-300" />
 
                 <div>
-                  <h3 className="font-syne font-black text-chalk text-lg leading-tight mb-3">
+                  <h3 className="font-syne font-black text-dirt text-lg leading-tight mb-3">
                     {feature.title}
                   </h3>
                   <p className="text-mist text-sm leading-relaxed">
