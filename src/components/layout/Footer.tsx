@@ -21,7 +21,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-mist text-sm leading-relaxed max-w-[260px]">
-              Vodotěsná LED svítidla pro chov prasat. Jednou instalace — 15 let bez starostí.
+              Speciální světla pro živočišnou výrobu. Jednou instalace — bez starostí.
             </p>
           </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
             © {new Date().getFullYear()} {COMPANY.legal} — Všechna práva vyhrazena
           </p>
           <p className="text-mist/30 text-xs">
-            LED osvětlení pro zemědělství · IP69K · Česká republika & Slovensko
+            Speciální světla pro živočišnou výrobu · IP67 · Česká republika & Slovensko
           </p>
         </div>
       </div>

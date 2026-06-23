@@ -2,7 +2,7 @@ export default function Problem() {
   const problems = [
     {
       before: "Zářivky praskají každou zimu",
-      after: "LED svítidlo přežije 50 000 hodin. To jsou přibližně 17 let denního provozu.",
+      after: "Speciální světla přežijí 35 000–50 000 hodin. Žádné výměny, žádná údržba.",
     },
     {
       before: "Čpavek ze stáje ničí elektroinstalaci",
@@ -10,7 +10,7 @@ export default function Problem() {
     },
     {
       before: "Tlakový čistič a svítidlo? Špatná kombinace.",
-      after: "IP69K. 80 barů, 80 °C, přímý proud. Routine cleaning included.",
+      after: "IP67 — plná ochrana před přímým proudem vody. Rutinní čistění tlakovou vodou nevadí.",
     },
     {
       before: "Elektrikář 2× ročně — i to je málo",
@@ -30,7 +30,7 @@ export default function Problem() {
             <span className="text-mist/60">Co to řeší.</span>
           </h2>
           <p className="text-mist leading-relaxed">
-            Chovatelé prasat mají s osvětlením stájí dlouhodobě stejné problémy.
+            Chovatelé v živočišné výrobě mají s osvětlením stájí dlouhodobě stejné problémy.
             Vyřešili jsme je jednou provždy.
           </p>
         </div>

@@ -12,14 +12,14 @@ export default function Overview() {
               className="font-syne font-black text-dirt leading-[0.88] mb-6"
               style={{ fontSize: "clamp(32px, 4.5vw, 58px)" }}
             >
-              Vodotěsné LED osvětlení
+              Speciální světla
               <br />
-              pro chov prasat.
+              pro živočišnou výrobu.
             </h2>
             <div className="mb-8">
               <p className="text-mist leading-relaxed">
-                S robustními vodotěsnými LED svítidly Valk Agro nemáte jako chovatel
-                prasat žádné starosti s osvětlením. Svítidla jsou odolná vůči
+                S robustními vodotěsnými svítidly Valk Agro nemáte jako chovatel
+                žádné starosti s osvětlením. Svítidla jsou odolná vůči
                 specifickým podmínkám stájí a lze je čistit tlakovým čističem
                 bez jakéhokoli rizika poškození.
               </p>
@@ -78,11 +78,11 @@ export default function Overview() {
               </div>
               <div>
                 <h3 className="font-syne font-black text-dirt text-xl mb-2">
-                  Osvětlení prasečích stájí
+                  Osvětlení živočišné výroby
                 </h3>
                 <p className="text-mist text-sm leading-relaxed">
-                  Stále více chovatelů prasat přechází na robustní, plně vodotěsná
-                  LED svítidla Valk Agro. Jednoduchá montáž, nulová údržba, 5 let záruka.
+                  Stále více chovatelů přechází na robustní, plně vodotěsná
+                  speciální světla Valk Agro. Jednoduchá montáž, nulová údržba, 5 let záruka.
                 </p>
               </div>
             </div>

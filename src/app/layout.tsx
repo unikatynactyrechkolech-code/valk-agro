@@ -27,10 +27,10 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Valk Agro — Vodotěsné LED osvětlení do stájí | IP69K",
+  title: "Valk Agro — Speciální světla pro živočišnou výrobu | IP67",
   description:
-    "Vodotěsná LED svítidla pro chov prasat. IP69K, odolnost vůči čpavku, prašnosti a tlakové vodě. Jednou rozsvítíte — pak na to zapomenete na 15 let.",
-  keywords: "LED osvětlení stáje, prasečí stáj, IP69K, vodotěsné svítidlo, chov prasat",
+    "Speciální světla pro živočišnou výrobu. IP67, odolnost vůči čpavku, prašnosti a tlakové vodě. Jednou rozsvítíte — pak na to zapomenete.",
+  keywords: "LED osvětlení stáje, živočišná výroba, IP67, vodotěsné svítidlo, speciální světla",
 };
 
 export const viewport: Viewport = {

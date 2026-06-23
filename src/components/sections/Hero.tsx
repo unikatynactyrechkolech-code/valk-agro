@@ -28,8 +28,8 @@ export default function Hero() {
           priority
           sizes="(max-width: 1024px) 100vw, 60vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/75 to-white/10 lg:via-white/55 lg:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-transparent to-white/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent lg:via-white/35 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/40" />
       </div>
 
       <div className="relative z-20 max-w-[1200px] mx-auto px-6 md:px-12 w-full pt-28 pb-20 md:pt-36 md:pb-28">
@@ -54,7 +54,7 @@ export default function Hero() {
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.18 }}
             className="text-mist text-base md:text-lg leading-relaxed max-w-[460px] mb-10"
           >
-            Vodotěsná LED svítidla pro chov prasat.
+            Speciální světla pro živočišnou výrobu.
             <br />
             Tlak vody, čpavek, prach — neřešíme.
           </motion.p>
@@ -68,7 +68,7 @@ export default function Hero() {
             <Button variant="primary" size="lg" href="/kontakt">
               Poptávka zdarma
             </Button>
-            <Button variant="secondary" size="lg" href="/produkty">
+            <Button variant="secondary" size="lg" href="/produkty" className="!border-brand !text-brand hover:!border-brand/70 hover:!text-brand/80">
               Technické parametry
             </Button>
           </motion.div>

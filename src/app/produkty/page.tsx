@@ -6,7 +6,7 @@ import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
   title: "Valk Agro Pro LED — Technické parametry | Valk Agro",
-  description: "Kompletní technická specifikace svítidla Valk Agro Pro LED. IP69K, 5000 lm, 40 W, záruka 5 let.",
+  description: "Kompletní technická specifikace svítidla Valk Agro Pro LED. IP67, 3400 lm, 25 W, záruka 5 let.",
 };
 
 const BASE = "https://www.valk-agro.com/content/smush-webp/2024/08";
@@ -29,7 +29,7 @@ const features = [
     img: "https://www.valk-agro.com/content/smush-webp/2024/08/f61317479b1dc165b4337eb21f6791c7.jpeg.webp",
   },
   {
-    title: "Odolnost vůči čpavku a vlhkosti (IP69K)",
+    title: "Odolnost vůči čpavku a vlhkosti (IP67)",
     desc: "Svítidlo je zcela vodotěsné, odolné vůči čpavku a vlhkosti. Lze čistit tlakovým čističem bez rizika poškození.",
     img: "https://www.valk-agro.com/content/smush-webp/2024/08/f63d61ee02204305871333ac4d6f3494.jpeg.webp",
   },
@@ -71,8 +71,8 @@ export default function ProduktyPage() {
                 Technické<br />parametry.
               </h1>
               <p className="text-mist max-w-[480px] leading-relaxed mb-10">
-                Svítidlo navržené pro nejhorší podmínky. Čpavek, prach, tlak vody, koroze —
-                všechno jsme testovali. IP69K není marketing, je to standard co splňujeme.
+              Svítidlo navržené pro nejhorší podmínky. Čpavek, prach, tlak vody, koroze —
+                všechno jsme testovali. IP67 není marketing, je to standard co splníme.
               </p>
               <Button variant="primary" href="/kontakt" size="lg">Poptávka zdarma</Button>
             </div>
@@ -104,7 +104,7 @@ export default function ProduktyPage() {
           </div>
           <div className="mt-10 p-6 border border-black/10 flex flex-wrap gap-4 items-center">
             <span className="font-tech text-[10px] tracking-[0.2em] uppercase text-mist/50 mr-2">Certifikace:</span>
-            {["IEC 60529 (IP69K)", "EN 62493", "CE", "RoHS 3"].map((c) => (
+            {["IEC 60529 (IP67)", "EN 62493", "CE", "RoHS 3"].map((c) => (
               <span key={c} className="font-tech text-xs text-mist border border-black/10 px-3 py-1.5 tracking-wide">{c}</span>
             ))}
           </div>
@@ -159,21 +159,20 @@ export default function ProduktyPage() {
             <div>
               <div className="divide-y divide-black/10">
                 {[
-                  ["Model", "Valk Agro Pro LED 40"],
-                  ["Krytí", "IP69K (IEC 60529)"],
-                  ["Příkon", "40 W ± 5 %"],
-                  ["Světelný tok", "5 000 lm"],
-                  ["Účinnost", "125 lm / W"],
+                  ["Model", "Valk Agro Pro LED 25"],
+                  ["Kytí", "IP67 (IEC 60529)"],
+                  ["Příkon", "25 W ± 5 %"],
+                  ["Světelný tok", "3 400 lm"],
+                  ["Učinnost", "136 lm / W"],
                   ["CRI", "> 80 Ra"],
-                  ["Teplota světla", "4 000 K (neutrální bílá)"],
-                  ["Napájecí napětí", "220–240 V AC, 50 Hz"],
+                  ["Teplota světla", "4 000–6 000 K"],
                   ["Faktor výkonu", "> 0,95"],
                   ["THD", "< 15 %"],
                   ["Rozměry", "1 250 × 82 × 55 mm"],
-                  ["Hmotnost", "1,4 kg"],
+                  ["Hmotnost", "550 g"],
                   ["Provozní teplota", "-20 °C až +50 °C"],
                   ["Materiál pouzdra", "Polykarbonát + hliník"],
-                  ["Životnost LED", "50 000 h (L70B10)"],
+                  ["Životnost LED", "35 000–50 000 h (L70B10)"],
                   ["Záruka", "5 let"],
                 ].map(([label, val], i) => (
                   <div key={i} className="flex items-center justify-between py-3 gap-4">

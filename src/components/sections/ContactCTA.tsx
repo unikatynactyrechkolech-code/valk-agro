@@ -56,7 +56,6 @@ export default function ContactCTA() {
                 { value: "2 500+", label: "svítidel v provozu" },
                 { value: "< 24 h", label: "odpověď na poptávku" },
                 { value: "5 let", label: "záruka bez výjimky" },
-                { value: "0×", label: "výpadků za rok (průměr)" },
               ].map((stat, i) => (
                 <div key={i} className="bg-chalk p-5 md:p-6">
                   <p
