@@ -28,8 +28,7 @@ export default function Hero() {
           priority
           sizes="(max-width: 1024px) 100vw, 60vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/60 to-transparent lg:via-white/35 lg:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/40" />
+
       </div>
 
       <div className="relative z-20 max-w-[1200px] mx-auto px-6 md:px-12 w-full pt-28 pb-20 md:pt-36 md:pb-28">
@@ -68,7 +67,7 @@ export default function Hero() {
             <Button variant="primary" size="lg" href="/kontakt">
               Poptávka zdarma
             </Button>
-            <Button variant="secondary" size="lg" href="/produkty" className="!border-brand !text-brand hover:!border-brand/70 hover:!text-brand/80">
+            <Button variant="secondary" size="lg" href="/produkty" className="!border-brand !text-dirt bg-transparent hover:!bg-transparent hover:!border-[#9D8B36]">
               Technické parametry
             </Button>
           </motion.div>
