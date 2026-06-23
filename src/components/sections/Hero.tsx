@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Button from "@/components/ui/Button";
+import Link from "next/link";
 import { COMPANY } from "@/lib/constants";
 
 export default function Hero() {
@@ -19,16 +20,17 @@ export default function Hero() {
       />
 
       {/* Real hero photo */}
-      <div className="absolute inset-y-0 right-0 w-full lg:w-[60%] pointer-events-none">
+      <div className="absolute inset-y-0 right-0 w-full lg:w-[65%] pointer-events-none">
         <Image
           src="https://www.valk-agro.com/content/smush-webp/2024/09/DSC06380_crop-2-scaled.jpg.webp"
           alt="Tlakový čistič mířený na LED svítidlo v prasečí stáji"
           fill
           className="object-cover object-center"
           priority
-          sizes="(max-width: 1024px) 100vw, 60vw"
+          sizes="(max-width: 1024px) 100vw, 65vw"
         />
-
+        {/* Blend left edge into white bg, keep right side fully visible */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/50 to-transparent" style={{background: "linear-gradient(to right, #fff 0%, rgba(255,255,255,0.55) 30%, rgba(255,255,255,0.1) 55%, transparent 75%)"}} />
       </div>
 
       <div className="relative z-20 max-w-[1200px] mx-auto px-6 md:px-12 w-full pt-28 pb-20 md:pt-36 md:pb-28">
@@ -67,9 +69,12 @@ export default function Hero() {
             <Button variant="primary" size="lg" href="/kontakt">
               Poptávka zdarma
             </Button>
-            <Button variant="secondary" size="lg" href="/produkty" className="!border-brand !text-dirt bg-transparent hover:!bg-transparent hover:!border-[#9D8B36]">
+            <Link
+              href="/produkty"
+              className="inline-flex items-center justify-center font-body font-semibold tracking-wide uppercase text-base px-9 py-4.5 border border-[#B5A040] text-dirt bg-transparent hover:border-[#9D8B36] hover:text-[#9D8B36] transition-all duration-150"
+            >
               Technické parametry
-            </Button>
+            </Link>
           </motion.div>
 
           <motion.div

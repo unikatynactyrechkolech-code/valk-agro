@@ -51,7 +51,7 @@ export default function ContactCTA() {
             </div>
 
             {/* Quick stats */}
-            <div className="mt-10 grid grid-cols-2 gap-px bg-black/8">
+            <div className="mt-10 grid grid-cols-3 gap-px bg-black/8">
               {[
                 { value: "2 500+", label: "svítidel v provozu" },
                 { value: "< 24 h", label: "odpověď na poptávku" },
