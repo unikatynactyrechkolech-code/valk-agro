@@ -149,8 +149,8 @@ export default function ProduktyPage() {
         </div>
       </section>
 
-      {/* Detailed specs + installation */}
-      <section className="bg-white py-20 md:py-28">
+      {/* Detailed specs + installation — skryto, detaily jsou na stranach produktu */}
+      <section className="hidden">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div>

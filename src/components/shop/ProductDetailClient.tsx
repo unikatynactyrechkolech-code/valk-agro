@@ -173,6 +173,38 @@ export default function ProductDetailClient({ product }: { product: Product }) {
         </div>
       </section>
 
+      {/* Per-product description */}
+      <section className="bg-chalk py-14 md:py-20">
+        <div className="max-w-[1200px] mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start max-w-[900px]">
+            <div>
+              <h2 className="font-syne font-black text-dirt leading-tight mb-5" style={{ fontSize: "clamp(28px, 3.5vw, 44px)" }}>
+                {product.id === "valk-60" && "Kompakt pročíštěné prostory."}
+                {product.id === "valk-120" && "Nejprodavanější model."}
+                {product.id === "valk-150" && "Na velké haly."}
+              </h2>
+              <p className="text-dirt leading-relaxed text-base">
+                {product.id === "valk-60" && "Nejmenší délka v naší řadě. Ideální pro porodnicy, menší haly nebo cílené osvětlení konkrétních míst. Stejná IP67 ochrana, stejná záruka, stejná odolnost — jen kompaktnější."}
+                {product.id === "valk-120" && "Střední délka. Nejchodnější model v malých i velkých stajích. Skvnělý poměr světla a ceny, jednoduchá montáž, univerzální použití."}
+                {product.id === "valk-150" && "Nejdelší svítidlo v nabídce. Měň svítidel na halu, více světla na m2. Volba chovatelů s velkokapacitmími stajemi a dlouhými řadami."}
+              </p>
+            </div>
+            <div className="flex flex-col gap-5">
+              {[
+                ["Ideální pro", product.id === "valk-60" ? "Porodnicy, menší haly, cílené osvětlení" : product.id === "valk-120" ? "Standardní haly, univerzální použití" : "Velké haly, dlouhé řady, velkokapac. chov"],
+                ["Ochrana", "IP67 — vodotěsné, odolné čpavku"],
+                ["Záruka", "5 let bez výjimky"],
+              ].map(([label, val]) => (
+                <div key={label} className="border-l-2 border-brand pl-4">
+                  <p className="font-tech text-[10px] text-mist/40 uppercase tracking-[0.15em] mb-1">{label}</p>
+                  <p className="text-dirt font-body text-sm font-medium">{val}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Full specs table */}
       <section className="bg-chalk py-14 md:py-20">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12">

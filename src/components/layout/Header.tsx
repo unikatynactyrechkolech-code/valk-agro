@@ -70,12 +70,12 @@ export default function Header() {
             aria-label="Košík"
             className="relative flex items-center gap-2 px-3 py-2 border border-black/10 hover:border-brand/40 transition-colors group"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-dirt group-hover:text-brand transition-colors">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-brand group-hover:text-[#9D8B36] transition-colors">
               <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
               <line x1="3" y1="6" x2="21" y2="6" />
               <path d="M16 10a4 4 0 01-8 0" />
             </svg>
-            <span className="font-tech text-xs text-dirt group-hover:text-brand transition-colors tracking-wide">
+            <span className="font-tech text-xs text-brand group-hover:text-[#9D8B36] transition-colors tracking-wide">
               Košík
             </span>
             {totalItems > 0 && (
@@ -97,9 +97,9 @@ export default function Header() {
           <button
             onClick={openCart}
             aria-label="Košík"
-            className="relative p-2 text-dirt hover:text-brand transition-colors"
+            className="relative p-2 text-brand hover:text-[#9D8B36] transition-colors"
           >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
               <line x1="3" y1="6" x2="21" y2="6" />
               <path d="M16 10a4 4 0 01-8 0" />
@@ -111,18 +111,18 @@ export default function Header() {
             )}
           </button>
           <button
-            className="flex flex-col gap-1.5 p-2"
+            className="flex flex-col gap-[5px] p-2"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Navigace"
           >
             <span
-              className={`block w-6 h-0.5 bg-brand transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+              className={`block w-7 h-[3px] bg-brand rounded-sm transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-[8px]" : ""}`}
             />
             <span
-              className={`block w-6 h-0.5 bg-brand transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`}
+              className={`block w-7 h-[3px] bg-brand rounded-sm transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`}
             />
             <span
-              className={`block w-6 h-0.5 bg-brand transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+              className={`block w-7 h-[3px] bg-brand rounded-sm transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-[8px]" : ""}`}
             />
           </button>
         </div>

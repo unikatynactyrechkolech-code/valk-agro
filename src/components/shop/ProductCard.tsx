@@ -60,7 +60,7 @@ export default function ProductCard({ product }: { product: Product }) {
           <h3 className="font-syne font-black text-dirt text-lg leading-tight">
             {product.name}
           </h3>
-          <p className="font-tech text-[11px] tracking-[0.08em] text-mist/50 mt-1">
+          <p className="font-tech text-[11px] tracking-[0.08em] text-dirt mt-1">
             136 lm/W · 5 let záruka · 35–50k h
           </p>
         </div>
