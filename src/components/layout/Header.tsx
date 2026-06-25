@@ -4,13 +4,11 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { COMPANY } from "@/lib/constants";
 import { useCart } from "@/context/CartContext";
 
 const navLinks = [
   { href: "/", label: "Úvod" },
   { href: "/produkty", label: "Produkty" },
-  { href: "/eshop", label: "E-shop" },
   { href: "/reference", label: "Reference" },
   { href: "/kontakt", label: "Kontakt" },
 ];
@@ -64,27 +62,24 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Phone + CTA */}
+        {/* Desktop right: cart + CTA */}
         <div className="hidden md:flex items-center gap-4">
-          <a
-            href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
-            className="font-tech text-sm text-mist hover:text-dirt transition-colors tracking-wide"
-          >
-            {COMPANY.phone}
-          </a>
-          {/* Cart icon */}
+          {/* Cart button */}
           <button
             onClick={openCart}
             aria-label="Košík"
-            className="relative p-2 text-mist hover:text-dirt transition-colors"
+            className="relative flex items-center gap-2 px-3 py-2 border border-black/10 hover:border-brand/40 transition-colors group"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="text-dirt group-hover:text-brand transition-colors">
               <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
               <line x1="3" y1="6" x2="21" y2="6" />
               <path d="M16 10a4 4 0 01-8 0" />
             </svg>
+            <span className="font-tech text-xs text-dirt group-hover:text-brand transition-colors tracking-wide">
+              Košík
+            </span>
             {totalItems > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-brand text-dirt font-tech text-[9px] font-medium flex items-center justify-center">
+              <span className="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] bg-brand text-dirt font-tech text-[9px] font-medium flex items-center justify-center px-1">
                 {totalItems > 9 ? "9+" : totalItems}
               </span>
             )}
@@ -102,9 +97,9 @@ export default function Header() {
           <button
             onClick={openCart}
             aria-label="Košík"
-            className="relative p-2 text-mist hover:text-dirt transition-colors"
+            className="relative p-2 text-dirt hover:text-brand transition-colors"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
               <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
               <line x1="3" y1="6" x2="21" y2="6" />
               <path d="M16 10a4 4 0 01-8 0" />
@@ -121,13 +116,13 @@ export default function Header() {
             aria-label="Navigace"
           >
             <span
-              className={`block w-6 h-0.5 bg-dirt transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+              className={`block w-6 h-0.5 bg-brand transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
             />
             <span
-              className={`block w-6 h-0.5 bg-dirt transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`}
+              className={`block w-6 h-0.5 bg-brand transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`}
             />
             <span
-              className={`block w-6 h-0.5 bg-dirt transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+              className={`block w-6 h-0.5 bg-brand transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
             />
           </button>
         </div>
@@ -156,12 +151,6 @@ export default function Header() {
                 </Link>
               ))}
             </nav>
-            <a
-              href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
-              className="font-tech text-sm text-mist block mb-4"
-            >
-              {COMPANY.phone}
-            </a>
             <Link
               href="/kontakt"
               className="inline-block bg-brand text-dirt font-body font-semibold text-xs px-6 py-3 uppercase tracking-wider hover:bg-[#9D8B36] transition-colors"

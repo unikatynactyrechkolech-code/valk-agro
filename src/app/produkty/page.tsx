@@ -1,26 +1,14 @@
 import { Metadata } from "next";
 import Image from "next/image";
-import { PRODUCT_SPECS, FAQ, COMPANY } from "@/lib/constants";
-import Badge from "@/components/ui/Badge";
+import { PRODUCT_SPECS, FAQ } from "@/lib/constants";
+import { SHOP_PRODUCTS } from "@/lib/products";
 import Button from "@/components/ui/Button";
+import ProductCard from "@/components/shop/ProductCard";
 
 export const metadata: Metadata = {
   title: "Valk Agro Pro LED — Technické parametry | Valk Agro",
   description: "Kompletní technická specifikace svítidla Valk Agro Pro LED. IP67, 3400 lm, 25 W, záruka 5 let.",
 };
-
-const BASE = "https://www.valk-agro.com/content/smush-webp/2024/08";
-
-const variants = [
-  { code: "30", len: "150 cm", k: "6000 K", type: "transparentní", w: "25 W", img: `${BASE}/balk-staand_30.png.webp` },
-  { code: "31", len: "150 cm", k: "6000 K", type: "matný",         w: "25 W", img: `${BASE}/balk-staand_31.png.webp` },
-  { code: "34", len: "150 cm", k: "4000 K", type: "transparentní", w: "25 W", img: `${BASE}/balk-staand_34.png.webp` },
-  { code: "35", len: "150 cm", k: "4000 K", type: "matný",         w: "25 W", img: `${BASE}/balk-staand_35.png.webp` },
-  { code: "20", len: "120 cm", k: "6000 K", type: "transparentní", w: "20 W", img: `${BASE}/balk-staand_20.png.webp` },
-  { code: "21", len: "120 cm", k: "6000 K", type: "matný",         w: "20 W", img: `${BASE}/balk-staand_21.png.webp` },
-  { code: "24", len: "120 cm", k: "4000 K", type: "transparentní", w: "20 W", img: `${BASE}/balk-staand_24.png.webp` },
-  { code: "25", len: "120 cm", k: "4000 K", type: "matný",         w: "20 W", img: `${BASE}/balk-staand_25.png.webp` },
-];
 
 const features = [
   {
@@ -130,24 +118,33 @@ export default function ProduktyPage() {
         </div>
       </section>
 
-      {/* Variants */}
-      <section className="bg-chalk py-20 md:py-28">
+      {/* Buy section — product cards */}
+      <section className="bg-chalk py-20 md:py-28" id="koupit">
         <div className="max-w-[1200px] mx-auto px-6 md:px-12">
-          <h2 className="font-syne font-black text-dirt leading-[0.88] mb-10"
-            style={{ fontSize: "clamp(34px, 4.5vw, 64px)" }}>
-            Dostupné provedení.
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {variants.map((v) => (
-              <div key={v.code} className="bg-white border border-black/10 p-5 hover:border-brand/20 transition-colors group">
-                <div className="relative aspect-[1/4] mb-4">
-                  <Image src={v.img} alt={`Valk Agro Pro ${v.code}`} fill className="object-contain" sizes="200px" />
-                </div>
-                <p className="font-tech text-brand text-xs tracking-[0.15em] uppercase mb-1">Pro {v.code}</p>
-                <p className="font-tech text-dirt text-sm">{v.len} · {v.k}</p>
-                <p className="font-tech text-mist/50 text-xs mt-0.5">{v.type} · {v.w}</p>
-              </div>
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+            <h2 className="font-syne font-black text-dirt leading-[0.88]"
+              style={{ fontSize: "clamp(34px, 4.5vw, 64px)" }}>
+              Vyberte svítidlo.
+            </h2>
+            <p className="text-mist text-sm max-w-[320px] md:text-right">
+              Zvolte délku, pak svítivost. Expedice do 3 pracovních dní.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {SHOP_PRODUCTS.map((product) => (
+              <ProductCard key={product.id} product={product} />
             ))}
+          </div>
+          <div className="mt-8 bg-white border border-black/8 p-5 flex flex-wrap gap-6 items-center justify-between">
+            <div className="flex flex-wrap gap-6">
+              {[["Doprava zdarma", "od 5 000 Kč"], ["Expedice", "do 3 prac. dní"], ["Vrácení", "do 14 dní"]].map(([l, v]) => (
+                <div key={l}>
+                  <p className="font-body font-semibold text-dirt text-sm">{l}</p>
+                  <p className="font-tech text-[11px] text-mist/50">{v}</p>
+                </div>
+              ))}
+            </div>
+            <p className="font-tech text-[11px] text-mist/30">Platba kartou · převodem · faktura</p>
           </div>
         </div>
       </section>
