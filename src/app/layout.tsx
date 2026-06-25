@@ -3,6 +3,9 @@ import { Barlow_Condensed, DM_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { CartProvider } from "@/context/CartContext";
+import Cart from "@/components/shop/Cart";
+import CookieBanner from "@/components/shop/CookieBanner";
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-syne-var",
@@ -50,9 +53,13 @@ export default function RootLayout({
       className={`${barlowCondensed.variable} ${dmSans.variable} ${ibmPlexMono.variable}`}
     >
       <body className="min-h-screen flex flex-col bg-white text-dirt">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <CartProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <Cart />
+          <CookieBanner />
+        </CartProvider>
       </body>
     </html>
   );

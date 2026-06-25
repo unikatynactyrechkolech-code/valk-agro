@@ -5,10 +5,12 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { COMPANY } from "@/lib/constants";
+import { useCart } from "@/context/CartContext";
 
 const navLinks = [
   { href: "/", label: "Úvod" },
   { href: "/produkty", label: "Produkty" },
+  { href: "/eshop", label: "E-shop" },
   { href: "/reference", label: "Reference" },
   { href: "/kontakt", label: "Kontakt" },
 ];
@@ -17,6 +19,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { totalItems, openCart } = useCart();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -62,13 +65,30 @@ export default function Header() {
         </nav>
 
         {/* Phone + CTA */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden md:flex items-center gap-4">
           <a
             href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
             className="font-tech text-sm text-mist hover:text-dirt transition-colors tracking-wide"
           >
             {COMPANY.phone}
           </a>
+          {/* Cart icon */}
+          <button
+            onClick={openCart}
+            aria-label="Košík"
+            className="relative p-2 text-mist hover:text-dirt transition-colors"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+            {totalItems > 0 && (
+              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-brand text-dirt font-tech text-[9px] font-medium flex items-center justify-center">
+                {totalItems > 9 ? "9+" : totalItems}
+              </span>
+            )}
+          </button>
           <Link
             href="/kontakt"
             className="bg-brand text-dirt font-body font-semibold text-xs px-5 py-2.5 uppercase tracking-wider hover:bg-[#9D8B36] transition-colors"
@@ -77,22 +97,40 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Mobile burger */}
-        <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          onClick={() => setMenuOpen((v) => !v)}
-          aria-label="Navigace"
-        >
-          <span
-            className={`block w-6 h-0.5 bg-dirt transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
-          />
-          <span
-            className={`block w-6 h-0.5 bg-dirt transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`}
-          />
-          <span
-            className={`block w-6 h-0.5 bg-dirt transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
-          />
-        </button>
+        {/* Mobile: cart icon + burger */}
+        <div className="md:hidden flex items-center gap-1">
+          <button
+            onClick={openCart}
+            aria-label="Košík"
+            className="relative p-2 text-mist hover:text-dirt transition-colors"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+            {totalItems > 0 && (
+              <span className="absolute top-0.5 right-0.5 w-4 h-4 bg-brand text-dirt font-tech text-[9px] font-medium flex items-center justify-center">
+                {totalItems > 9 ? "9+" : totalItems}
+              </span>
+            )}
+          </button>
+          <button
+            className="flex flex-col gap-1.5 p-2"
+            onClick={() => setMenuOpen((v) => !v)}
+            aria-label="Navigace"
+          >
+            <span
+              className={`block w-6 h-0.5 bg-dirt transition-transform duration-200 ${menuOpen ? "rotate-45 translate-y-2" : ""}`}
+            />
+            <span
+              className={`block w-6 h-0.5 bg-dirt transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`}
+            />
+            <span
+              className={`block w-6 h-0.5 bg-dirt transition-transform duration-200 ${menuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+            />
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
